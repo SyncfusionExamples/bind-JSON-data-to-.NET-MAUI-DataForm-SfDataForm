@@ -8,7 +8,7 @@ namespace LoadJSONData
         {
             if (sourceName == "City")
             {
-                List<string> city = new List<string>() { "Chennai", "California", "Calabria", "India", "Qatar" };
+                List<string> city = new List<string>() { "Los Vegas", "Chicago", "Los Angeles", "New York" };
                 return city;
             }
 
