@@ -4,7 +4,7 @@ namespace LoadJSONData
 {
     public class DataFormBehavior : Behavior<ContentPage>
     {
-        private SfDataForm dataForm;
+        private SfDataForm? dataForm;
         protected override void OnAttachedTo(ContentPage bindable)
         {
             base.OnAttachedTo(bindable);

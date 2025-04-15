@@ -10,15 +10,17 @@ namespace LoadJSONData
         public DataFormViewModel()
         {
             this.DataFormModel = new DataFormModel();
-            List<JSONDataModel> jsonDatas = JsonSerializer.Deserialize<List<JSONDataModel>>(JSONDataModel);
-
-            foreach (var data in jsonDatas)
+            List<JSONDataModel>? jsonDatas = JsonSerializer.Deserialize<List<JSONDataModel>>(JSONDataModel);
+            if (jsonDatas != null)
             {
-                this.DataFormModel.Name = data.EmployeeName;
-                this.DataFormModel.Department = data.EmployeeDepartment;
-                this.DataFormModel.Role = data.EmployeeRole;
-                this.DataFormModel.Branch = data.EmployeeBranch;
-                this.DataFormModel.City = data.EmployeeCity;
+                foreach (var data in jsonDatas)
+                {
+                    this.DataFormModel.Name = data.EmployeeName;
+                    this.DataFormModel.Department = data.EmployeeDepartment;
+                    this.DataFormModel.Role = data.EmployeeRole;
+                    this.DataFormModel.Branch = data.EmployeeBranch;
+                    this.DataFormModel.City = data.EmployeeCity;
+                }
             }
         }                          
     }                              
