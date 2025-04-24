@@ -8,10 +8,10 @@ namespace LoadJSONData
 {
     public class JSONDataModel
     {
-        public string EmployeeName { get; set; }
-        public string EmployeeDepartment { get; set; }
-        public string EmployeeRole { get; set;}
-        public string EmployeeBranch { get; set;}
-        public string EmployeeCity { get; set;}
+        public string EmployeeName { get; set; } = string.Empty;
+        public string EmployeeDepartment { get; set; } = string.Empty;
+        public string EmployeeRole { get; set;} = string.Empty;
+        public string EmployeeBranch { get; set;} = string.Empty;
+        public string EmployeeCity { get; set;} = string.Empty;
     }
 }
